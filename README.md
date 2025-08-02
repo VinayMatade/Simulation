@@ -116,9 +116,11 @@ With the simulation running and all three terminals set up, you can now run a RO
 
 ### Run the Offboard Control Node
 
-In **Terminal 3**, run the following command. This node will command the drone to arm, take off to an altitude of 5 meters, and hold its position.
+In **Terminal 4**, run the following command. This node will command the drone to arm, take off to an altitude of 5 meters, and hold its position.
 
 ```bash
+source /opt/ros/humble/setup.bash
+source ~/ros2_humble/install/local_setup.bash
 ros2 run px4_ros_com offboard_control
 ```
 
