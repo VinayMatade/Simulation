@@ -17,6 +17,11 @@ This guide provides complete instructions for using a development environment fo
 
 This environment, set up by the accompanying installation script, contains all the necessary components for developing and testing autonomous drone applications. It combines the powerful ROS 2 robotics framework with the professional-grade PX4 flight control software in a simulated 3D world.
 
+PX4_Autopilot guides:
+https://docs.px4.io/main/en/ros2/user_guide
+https://docs.px4.io/main/en/simulation/
+https://docs.px4.io/main/en/ros/offboard_control.html
+
 ---
 ## Prerequisites
 
@@ -39,7 +44,7 @@ python3 --version
 
 All the required software and dependencies are installed automatically by running the `ros2-px4-install.sh` script. This script handles the entire setup process, from installing system packages to cloning and building the required software.
 Run this in the repository directory to install.
-```bash 
+```bash
 chmod +x ./ros2-px4-install.sh
 sudo ./ros2-px4-install.sh
 ```
