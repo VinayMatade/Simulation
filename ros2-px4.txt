@@ -1,0 +1,17 @@
+cd PX4-Autopilot
+make px4_sitl gz_x500
+
+MicroXRCEAgent udp4 -p 8888
+
+cd ros2_humble
+source /opt/ros/humble/setup.bash
+source install/local_setup.bash
+ros2 launch px4_ros_com sensor_combined_listener.launch.py
+
+cd ros2_humble
+source install/local_setup.bash
+ros2 run translation_node translation_node_bin
+
+
+ros2 run ros_gz_bridge parameter_bridge /clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock
+
