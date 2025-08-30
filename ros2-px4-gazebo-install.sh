@@ -95,9 +95,7 @@ check_python_version() {
   fi
 
   # Check if the version starts with "3.10"
-  if [[ "$python_version" == "3.10" |
-
-| "$python_version" == "3.10."* ]]; then
+  if [[ "$python_version" == "3.10" || "$python_version" == "3.10."* ]]; then
     log_success "Python version is confirmed to be 3.10.x (found: $python_version)."
   else
     log_error "Required Python version is 3.10.x, but found $python_version."
@@ -185,7 +183,7 @@ install_xrce_dds_agent() {
     return
   fi
 
-  if; then
+  if [ -d "$HOME/Micro-XRCE-DDS-Agent" ]; then
     log_warn "Micro-XRCE-DDS-Agent directory already exists. Skipping clone."
   else
     log_info "Cloning Micro-XRCE-DDS-Agent repository..."
